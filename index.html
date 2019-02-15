@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    
+</head>
+<body> 
+    <div class="header-nav">
+        <h1>WEATHER APPLICATION</h1>
+    </div>
+    <div class="search-weather-box">
+        <center>
+            <select id="select-city" class="city-select-box" required >
+                <option >Select</option>
+                <option value="by-city">By City</option>
+                <option value="by-zipcode">By Zip Code</option>
+            </select>
+            <input id="search-text" placeholder="SEARCH" required>
+            <button onclick="Validation()"><i class="fas fa-search"></i></button>
+        </center>
+    </div>
+    
+    
+        
+    <div id="myModal" class="modal">
+        <div class="weather-box">
+            <div class="one">
+                <h2 id="city"></h2>
+                <p id="day-time"> </p>
+                <p id="atmosphere"></p>
+            </div>
+            <div class="two">
+                    
+                <div style="float: left">
+                    <div id= "main-image" class="main-image" style="float: left; ">
+                        
+                    </div>
+                    <div style="float: left">
+                        <p class="temperature" id="temperature"></p>
+                    </div>
+                    
+                    <div class="two-temp-a" style="float: Right" >
+                        <p><a id="c" href="#" onclick="fahrenheitToCelsius()" role="button" >°C</a> | <a id="f" role="button" href="#" onclick="celsiusToFahrenheit()">°F</a></p>
+                    </div>
+                </div>
+                <div class="two-text">
+                    <p>Precipitation: 0%</p>
+                    <p id="humidity"></p>
+                    <p id="wind"></p>
+                </div>
+            </div>
+            <div class="three">
+                <div id="container" style="width:500px; height:150px;"></div>
+            </div>
+            <div class="four">
+                <div id="weather-flex" class="weather-flex">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/GetWeather.js"></script>
+</body>
+</html>
